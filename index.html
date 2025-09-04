@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <!-- Pré-conexão para reduzir latência -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Pré-carregamento da folha de estilo das fontes -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style">
+
+  <!-- Carregamento da fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Currículo - Hiago Rhyan</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    :root {
+      --font-base: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", sans-serif;
+    }
+
+    html, body {
+      font-family: var(--font-base);
+      font-weight: 400;
+    }
+
+    b, strong { font-weight: 700; }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-base);
+      font-weight: 700;
+    }
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: roboto, arial;
       background: #f0f2f5;
       color: #333;
     }
@@ -18,6 +43,7 @@
       color: white;
       text-align: center;
       padding: 40px 20px;
+      background-image: url("https://media.licdn.com/dms/image/v2/D4D16AQEAe7BQqir3uQ/profile-displaybackgroundimage-shrink_350_1400/B4DZZonXfbHIAY-/0/1745511875465?e=1759968000&v=beta&t=D1mLZ01g0jBq9cceHoMcGPPlQ7oaru6I7ENtrCKGn3Q");
     }
     header img {
       width: 120px;
@@ -52,10 +78,12 @@
       margin-bottom: 20px;
     }
     .card h2 {
+      /*
       color: #3498db;
       margin-bottom: 15px;
-      border-left: 5px solid #2ecc71;
+      border-left: 5px solid #999;
       padding-left: 10px;
+      */
     }
 
     .contact p {
@@ -63,7 +91,7 @@
       font-size: 15px;
     }
     .contact a {
-      color: #2ecc71;
+      color: #666;
       text-decoration: none;
       font-weight: bold;
     }
@@ -73,8 +101,8 @@
       margin: 12px 0;
     }
     .skill-name {
-      font-weight: bold;
       margin-bottom: 5px;
+      color: #333;
     }
     .skill-bar {
       background: #e0e0e0;
@@ -84,18 +112,32 @@
     }
     .skill-level {
       height: 100%;
-      background: linear-gradient(90deg, #3498db, #2ecc71);
+      background: linear-gradient(90deg, #fff, #000);
     }
 
     ul {
-      padding-left: 18px;
+      padding-left: 0px;
+      list-style: none;
     }
     li {
-      margin-bottom: 12px;
+      margin-bottom: 30px;
     }
     .icon {
       margin-right: 8px;
-      color: #2ecc71;
+      color: #333;
+    }
+    .marcado {
+      background-color: #fff;   /* fundo apenas no texto */
+      color: #333;              /* cor da fonte */
+      padding: 4px 6px 6px 6px;          /* espaçamento interno */
+      border-radius: 1px;        /* borda arredondada */
+      margin: 4px auto;             /* separação entre linhas */
+    }
+    .nome {
+      width: 250px;
+    }
+    .legenda {
+      width: 400px;
     }
   </style>
 </head>
@@ -103,9 +145,9 @@
 
   <!-- Header -->
   <header>
-    <img src="https://via.placeholder.com/120" alt="Foto">
-    <h1>Hiago Rhyan</h1>
-    <p>E-commerce | SEO | UX/UI</p>
+    <img src="https://media.licdn.com/dms/image/v2/D4D03AQHqJlG5a3zcIA/profile-displayphoto-shrink_800_800/B4DZX.bkD6H4Ac-/0/1743730393956?e=1759968000&v=beta&t=4QdudHUJj4rLGY8PFQW3W95jbfaylYEk-WnTWGrqmwg" alt="Foto">
+    <h1 class="marcado nome">Hiago Rhyan</h1>
+    <p class="marcado legenda">E-commerce, SEO, Marketplaces e Analytics</p>
   </header>
 
   <div class="container">
@@ -113,14 +155,14 @@
     <!-- Coluna esquerda -->
     <div>
       <div class="card contact">
-        <h2><i class="fa fa-address-card"></i> Contato</h2>
+        <!--<h2><i class="fa fa-address-card"></i> Contato</h2>-->
         <p><i class="fa fa-envelope icon"></i>euhiagorhyan@gmail.com</p>
         <p><i class="fa fa-map-marker-alt icon"></i> Marcílio de Noronha, Viana - ES, Brasil</p>
-        <p><i class="fab fa-linkedin icon"></i> <a href="https://www.linkedin.com/in/hiagorhyan">LinkedIn</a></p>
+        <p><i class="fab fa-linkedin icon"></i><a href="https://www.linkedin.com/in/hiagorhyan">LinkedIn</a></p>
       </div>
 
       <div class="card skills">
-        <h2><i class="fa fa-code"></i> Competências</h2>
+        <h2><!--<i class="fa fa-code">--></i> Competências</h2>
 
         <div class="skill">
           <div class="skill-name">SEO & E-commerce</div>
@@ -147,18 +189,112 @@
           <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
         </div>
       </div>
+
+      <div class="card skills">
+        <h2></i> Hard Skills</h2>
+        <div class="skill"><div class="skill-name">Excel avançado (tabelas dinâmicas, fórmulas, gráficos, PROCV)</div></div>
+        <div class="skill"><div class="skill-name">Google Sheets e Google Docs</div></div>
+        <div class="skill"><div class="skill-name">Hubspot CRM, Marketing e Sales</div></div>
+        <div class="skill"><div class="skill-name">VTEX, Shopify, Tray e Wake</div></div>
+        <div class="skill"><div class="skill-name">Google Analytics, Ads, Appsflyer</div></div>
+        <div class="skill"><div class="skill-name">SEO, CRM, BI, CRO</div></div>
+        <div class="skill"><div class="skill-name">HTML, CCS3, JS e SQL</div></div>
+        <div class="skill"><div class="skill-name">Pacote Office</div></div>
+        <div class="skill"><div class="skill-name">Pacote Adobe</div></div>
+        <div class="skill"><div class="skill-name">ERP Sankhya</div></div>
+      </div>
+
+      <div class="card skills">
+        <h2></i> Soft Skills</h2>
+        <div class="skill"><div class="skill-name">Boa comunicação oral e escrita</div></div>
+        <div class="skill"><div class="skill-name">Negociação</div></div>
+        <div class="skill"><div class="skill-name">Organização</div></div>
+        <div class="skill"><div class="skill-name">Perfil analítico e orientado a dados</div></div>
+        <div class="skill"><div class="skill-name">Facilidade de aprendizado</div></div>
+        <div class="skill"><div class="skill-name">Foco em metas e resultados</div></div>
+        <div class="skill"><div class="skill-name">Capacidade de planejamento e execução</div></div>
+        <div class="skill"><div class="skill-name">Adaptabilidade e resiliência</div></div>
+        <div class="skill"><div class="skill-name">Proatividade</div></div>
+        <div class="skill"><div class="skill-name">Trabalho em equipe multidisciplinar</div></div>
+        <div class="skill"><div class="skill-name">Perfil comercial</div></div>
+        <div class="skill"><div class="skill-name">Pensamento crítico e solução de problemas</div></div>
+      </div>
     </div>
 
     <!-- Coluna direita -->
     <div>
       <div class="card">
-        <h2><i class="fa fa-user"></i> Resumo</h2>
+        <!--<h2><i class="fa fa-user"></i> Resumo</h2>-->
         <p>
-          Profissional com sólida experiência em operação de e-commerce e marketplaces, com foco em SEO, 
-          UX/UI e gestão de catálogo de produtos. 
-          Atuo em otimização da jornada do cliente, monitoramento de KPIs comerciais e implementação de melhorias estratégicas. 
-          Conhecimento avançado em VTEX, AnyMarket, Olist, Google Analytics, Power BI e marketing digital.
+          Sou profissional de E-commerce com sólida experiência em cadastro de produtos, gestão de marketplaces (Amazon, Mercado Livre, Magalu, B2W, Via Varejo) e administração de lojas virtuais. Atuo em todo o ciclo do digital: da otimização de SEO e tratamento de imagens à criação de campanhas promocionais, estratégias de UX/UI e análise de KPIs para alavancar vendas e conversão.
         </p>
+        <p>
+          Tenho domínio de ferramentas como ERP Sankhya, CRM, VTEX, Google Analytics, Ads e Excel avançado. Minha atuação é orientada a dados, com foco em relatórios, performance, funil de vendas e desenvolvimento de estratégias para aquisição e retenção de clientes.
+        </p>
+        <p>
+          Sou organizado, proativo e analítico, com facilidade em negociação, comunicação e resolução de problemas. Trabalho em equipe multidisciplinar, propondo melhorias contínuas para garantir resultados consistentes e elevar a experiência digital do cliente.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2><!--<i class="fa fa-language"></i>--> Atividades / Habilidades</h2>
+        <p>Cadastro de produtos em sites e marketplaces (Amazon, Mercado Livre, Magalu, B2W, Via Varejo, MadeiraMadeira, Carrefour, WooCommerce, VTEX)</p>
+        <p>Tratamento de imagens de produtos (Photoshop, CorelDraw, Canva, Crello)</p>
+        <p>Manutenção de vitrines, banners e páginas de produtos</p>
+        <p>Criação e execução de promoções e planos comerciais</p>
+        <p>Acompanhamento de pedidos, expedição e status de entrega</p>
+        <p>Atendimento ao cliente via e-mail, chat, WhatsApp, telefone e SAC</p>
+        <p>Gestão de pré e pós-venda, devoluções e trocas</p>
+        <p>Resolução de chamados e reclamações (Reclame Aqui, Ouvidoria)</p>
+        <p>Gestão de catálogo e precificação</p>
+        <p>Correção de erros em plataformas e integrações (AnyMarket, ERPs)</p>
+        <p>Acompanhamento de KPIs, métricas e relatórios (vendas, conversão, funil, GMV, margem)</p>
+        <p>Criação e análise de dashboards (BI, Google Analytics, Appsflyer)</p>
+        <p>Planejamento de mídia e campanhas digitais</p>
+        <p>Elaboração de briefings para criação de conteúdos e campanhas</p>
+        <p>SEO de produtos e otimização de busca interna</p>
+        <p>Estratégias de UX/UI e melhorias de navegação</p>
+        <p>Gestão de estoque e logística</p>
+        <p>Configuração de sistemas de entrega e pagamento</p>
+        <p>Gestão de marketplaces (BuyBox, anúncios, integrações)</p>
+        <p>Negociação com fornecedores e parceiros</p>
+        <p>Interface com áreas de marketing, tecnologia, financeiro e operações</p>
+        <p>Suporte a clientes internos e externos</p>
+        <p>Análise de concorrência e tendências de mercado</p>
+        <p>Desenvolvimento e execução de planos estratégicos de e-commerce</p>
+        <p>Planejamento de calendário promocional e comercial</p>
+        <p>Gestão de tráfego pago (Google Ads, Facebook Ads, Instagram Ads, LinkedIn Ads, TikTok Ads)</p>
+        <p>Configuração de pixels e acompanhamento de campanhas</p>
+        <p>Execução de testes A/B e otimização de campanhas</p>
+        <p>CRM e funil de vendas</p>
+        <p>Planejamento de ações de aquisição e retenção de clientes</p>
+        <p>Acompanhamento do funil de conversão</p>
+        <p>Criação de relatórios de performance e insights para vendas</p>
+        <p>Gestão de mídia paga e orgânica (SEO, Inbound, redes sociais)</p>
+        <p>Organização de calendário de e-mail marketing</p>
+        <p>Comunicação com clientes e suporte de vendas</p>
+        <p>Experiência em CRO (Conversion Rate Optimization)</p>
+        <p>Desenvolvimento de critérios de ordenação de produtos</p>
+        <p>Acompanhamento de alavancas de conversão (cupons, frete grátis)</p>
+        <p>Forecast e previsão de vendas (Amazon, B2B/B2C)</p>
+        <p>Gestão de expansão de plataformas em novos mercados</p>
+        <p>Inglês Intermediário</p>
+      </div>
+
+      <div class="card">
+        <h2><i class="fa fa-graduation-cap"></i> Educação</h2>
+        <ul>
+          <li><strong>Técnico em Informática</strong> – CEET Vasco CoutinhoTécnico em Informática (2015 - 2016)</li>
+          <li><strong>Graduação em Publicidade</strong> – Centro Universitário Adventista de São Paulo (2018 - 2021)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2><i class="fa fa-project-diagram"></i> Projetos</h2>
+        <ul>
+          <li><strong>VTEX</strong> – Migração de Tecnologia de VTEX Legacy para VTEX IO e construção de novo layout usando estrategias atuais. </li>
+          <li><strong>Marketplaces</strong> – Ativar marketplaces Americanas, Magalu, Mercado Livre, Carrefour e Via Varejo e integrar anuncios</li>
+        </ul>
       </div>
 
       <div class="card">
@@ -166,32 +302,11 @@
         <ul>
           <li>
             <strong>Acimaq Equipamentos Comerciais</strong> – E-commerce  <em>(2022 – 2025)</em>  <br>
-            SEO, gestão de catálogo, análise de KPIs e otimização de UX.
+            <!--SEO, gestão de catálogo, análise de KPIs e otimização de UX-->
           </li>
         </ul>
       </div>
 
-      <div class="card">
-        <h2><i class="fa fa-graduation-cap"></i> Educação</h2>
-        <ul>
-          <li><strong>Centro Universitário Adventista de São Paulo</strong> – Publicidade e Propaganda (2018 - 2021)</li>
-          <li><strong>CEET Vasco Coutinho</strong> – Técnico em Informática (2015 - 2016)</li>
-          <li><strong>EEEM Irmã Dulce Lopes Ponte</strong> – Ensino Médio Integrado com Técnico em Meio Ambiente (2012 - 2014)</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2><i class="fa fa-project-diagram"></i> Projetos</h2>
-        <ul>
-          <li><strong>Acimaq Vtex IO</strong> – Migração de plataforma VTEX Legacy para VTEX IO</li>
-          <li><strong>Marketplaces</strong> – Integrações em Americanas, Magalu, Mercado Livre, Carrefour e Via Varejo.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2><i class="fa fa-language"></i> Idiomas</h2>
-        <p>Inglês – Intermediário</p>
-      </div>
     </div>
   </div>
 
