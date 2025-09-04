@@ -1,152 +1,154 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <!-- Pré-conexão para reduzir latência -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Pré-conexão para reduzir latência -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Pré-carregamento da folha de estilo das fontes -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style">
+<!-- Pré-carregamento da folha de estilo das fontes -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style">
 
-  <!-- Carregamento da fonte -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<!-- Carregamento da fonte -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Currículo - Hiago Rhyan</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currículo - Hiago Rhyan</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <link rel="icon" type="image/png" href="https://media.licdn.com/dms/image/v2/D4D03AQHqJlG5a3zcIA/profile-displayphoto-shrink_800_800/B4DZX.bkD6H4Ac-/0/1743730393956?e=1759968000&v=beta&t=4QdudHUJj4rLGY8PFQW3W95jbfaylYEk-WnTWGrqmwg">
+<link rel="icon" type="image/png" href="https://media.licdn.com/dms/image/v2/D4D03AQHqJlG5a3zcIA/profile-displayphoto-shrink_800_800/B4DZX.bkD6H4Ac-/0/1743730393956?e=1759968000&v=beta&t=4QdudHUJj4rLGY8PFQW3W95jbfaylYEk-WnTWGrqmwg">
   
-  <style>
-    :root {
-      --font-base: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", sans-serif;
-    }
-
-    html, body {
-      font-family: var(--font-base);
-      font-weight: 400;
-    }
-
-    b, strong { font-weight: 700; }
-
-    h1, h2, h3, h4, h5, h6 {
-      font-family: var(--font-base);
-      font-weight: 700;
-    }
-    body {
-      margin: 0;
-      font-family: roboto, arial;
-      background: #f0f2f5;
-      color: #333;
-    }
-
-    header {
-      background: linear-gradient(135deg, #3498db, #2ecc71);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-      background-image: url("https://media.licdn.com/dms/image/v2/D4D16AQEAe7BQqir3uQ/profile-displaybackgroundimage-shrink_350_1400/B4DZZonXfbHIAY-/0/1745511875465?e=1759968000&v=beta&t=D1mLZ01g0jBq9cceHoMcGPPlQ7oaru6I7ENtrCKGn3Q");
-    }
-    header img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 4px solid white;
-      margin-bottom: 15px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 8px;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 30px auto;
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 25px;
-      padding: 0 20px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 25px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
-    }
-    .card h2 {
-      /*
-      color: #3498db;
-      margin-bottom: 15px;
-      border-left: 5px solid #999;
-      padding-left: 10px;
-      */
-    }
-
-    .contact p {
-      margin: 8px 0;
-      font-size: 15px;
-    }
-    .contact a {
-      color: #666;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* Skills com barra de progresso */
-    .skill {
-      margin: 12px 0;
-    }
-    .skill-name {
-      margin-bottom: 5px;
-      color: #333;
-    }
-    .skill-bar {
-      background: #e0e0e0;
-      border-radius: 8px;
-      overflow: hidden;
-      height: 10px;
-    }
-    .skill-level {
-      height: 100%;
-      background: linear-gradient(90deg, #fff, #000);
-    }
-
-    ul {
-      padding-left: 0px;
-      list-style: none;
-    }
-    li {
-      margin-bottom: 30px;
-    }
-    .icon {
-      margin-right: 8px;
-      color: #333;
-    }
-    .marcado {
-      background-color: #fff;   /* fundo apenas no texto */
-      color: #333;              /* cor da fonte */
-      padding: 4px 6px 6px 6px;          /* espaçamento interno */
-      border-radius: 1px;        /* borda arredondada */
-      margin: 4px auto;             /* separação entre linhas */
-    }
-    .nome {
-      width: 250px;
-    }
-    .legenda {
-      width: 400px;
-    }
-  </style>
+<style>
+:root {
+  --font-base: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", sans-serif;
+}
+html, body {
+  font-family: var(--font-base);
+  font-weight: 400;
+}
+b, strong {
+  font-weight: 700;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-base);
+  font-weight: 700;
+}
+body {
+  margin: 0;
+  font-family: roboto, arial;
+  background: #f0f2f5;
+  color: #333;
+}
+header {
+  background: linear-gradient(135deg, #3498db, #2ecc71);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  background-position: center center;
+  background-size: 100% auto;
+  background-image: url("https://media.licdn.com/dms/image/v2/D4D16AQEAe7BQqir3uQ/profile-displaybackgroundimage-shrink_350_1400/B4DZZonXfbHIAY-/0/1745511875465?e=1759968000&v=beta&t=D1mLZ01g0jBq9cceHoMcGPPlQ7oaru6I7ENtrCKGn3Q");
+}
+header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 15px;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+header p {
+  font-size: 1.2rem;
+  margin-top: 8px;
+}
+.container {
+  max-width: 1100px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 25px;
+  padding: 0 20px;
+}
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 500px) {
+  .legenda {
+    width: auto !important;
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  .nome {
+    width: auto !important;
+    font-size: 24px;
+  }
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+.contact p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+.contact a {
+  color: #666;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* Skills com barra de progresso */
+.skill {
+  margin: 12px 0;
+}
+.skill-name {
+  margin-bottom: 5px;
+  color: #333;
+}
+.skill-bar {
+  background: #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 10px;
+}
+.skill-level {
+  height: 100%;
+  background: linear-gradient(90deg, #fff, #000);
+}
+ul {
+  padding-left: 0px;
+  list-style: none;
+}
+li {
+  margin-bottom: 30px;
+}
+.icon {
+  margin-right: 8px;
+  color: #333;
+}
+.marcado {
+  background-color: #fff;   /* fundo apenas no texto */
+  color: #333;              /* cor da fonte */
+  padding: 4px 6px 6px 6px;          /* espaçamento interno */
+  border-radius: 1px;        /* borda arredondada */
+  margin: 4px auto;             /* separação entre linhas */
+}
+.nome {
+  width: 250px;
+}
+.legenda {
+  width: 400px;
+}
+</style>
 </head>
 <body>
-
-  <!-- Header -->
   <header>
     <img src="https://media.licdn.com/dms/image/v2/D4D03AQHqJlG5a3zcIA/profile-displayphoto-shrink_800_800/B4DZX.bkD6H4Ac-/0/1743730393956?e=1759968000&v=beta&t=4QdudHUJj4rLGY8PFQW3W95jbfaylYEk-WnTWGrqmwg" alt="Foto">
     <h1 class="marcado nome">Hiago Rhyan</h1>
@@ -312,6 +314,5 @@
 
     </div>
   </div>
-
 </body>
 </html>
