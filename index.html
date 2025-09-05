@@ -99,6 +99,10 @@ header p {
   margin: 8px 0;
   font-size: 15px;
 }
+.contact p span {
+  color: #666;
+  font-size: 12px;
+}
 .contact a {
   color: #666;
   text-decoration: none;
@@ -146,6 +150,18 @@ li {
 .legenda {
   width: 400px;
 }
+.skill-level {
+  height: 100%;
+  background: linear-gradient(90deg, #fff, #000);
+  width: 0; /* começa vazio */
+  animation: fillBar 2s ease forwards; /* animação */
+}
+
+/* Animação que vai de 0 até o valor final */
+@keyframes fillBar {
+  from { width: 0; }
+  to   { width: var(--final-width); }
+}
 </style>
 </head>
 <body>
@@ -161,8 +177,8 @@ li {
     <div>
       <div class="card contact">
         <!--<h2><i class="fa fa-address-card"></i> Contato</h2>-->
+        <p><i class="fa fa-map-marker-alt icon"></i> Marcílio de Noronha, Viana - ES, Brasil </br><span>Disponibilidade para viagem ✹ carro/moto </span></p>
         <p><i class="fa fa-envelope icon"></i>euhiagorhyan@gmail.com</p>
-        <p><i class="fa fa-map-marker-alt icon"></i> Marcílio de Noronha, Viana - ES, Brasil</p>
         <p><i class="fab fa-linkedin icon"></i><a href="https://www.linkedin.com/in/hiagorhyan">LinkedIn</a></p>
       </div>
 
@@ -170,29 +186,40 @@ li {
         <h2><!--<i class="fa fa-code">--></i> Competências</h2>
 
         <div class="skill">
-          <div class="skill-name">SEO & E-commerce</div>
-          <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
-        </div>
+  <div class="skill-name">SEO & E-commerce</div>
+  <div class="skill-bar">
+    <div class="skill-level" style="--final-width: 90%;"></div>
+  </div>
+</div>
 
-        <div class="skill">
-          <div class="skill-name">UX/UI Web Designer</div>
-          <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
-        </div>
+<div class="skill">
+  <div class="skill-name">UX/UI Web Designer</div>
+  <div class="skill-bar">
+    <div class="skill-level" style="--final-width: 80%;"></div>
+  </div>
+</div>
 
-        <div class="skill">
-          <div class="skill-name">Google Analytics / Power BI</div>
-          <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
-        </div>
+<div class="skill">
+  <div class="skill-name">Google Analytics / Power BI</div>
+  <div class="skill-bar">
+    <div class="skill-level" style="--final-width: 85%;"></div>
+  </div>
+</div>
 
-        <div class="skill">
-          <div class="skill-name">Bling / Sankhya / VTEX / Marketplaces</div>
-          <div class="skill-bar"><div class="skill-level" style="width: 88%;"></div></div>
-        </div>
+<div class="skill">
+  <div class="skill-name">Bling / Sankhya / VTEX / Marketplaces</div>
+  <div class="skill-bar">
+    <div class="skill-level" style="--final-width: 88%;"></div>
+  </div>
+</div>
 
-        <div class="skill">
-          <div class="skill-name">HTML / CSS / JS</div>
-          <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
-        </div>
+<div class="skill">
+  <div class="skill-name">HTML / CSS / JS</div>
+  <div class="skill-bar">
+    <div class="skill-level" style="--final-width: 75%;"></div>
+  </div>
+</div>
+
       </div>
 
       <div class="card skills">
