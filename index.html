@@ -138,11 +138,11 @@ li {
   color: #333;
 }
 .marcado {
-  background-color: #fff;   /* fundo apenas no texto */
-  color: #333;              /* cor da fonte */
-  padding: 4px 6px 6px 6px;          /* espaçamento interno */
-  border-radius: 1px;        /* borda arredondada */
-  margin: 4px auto;             /* separação entre linhas */
+  background-color: #fff; 
+  color: #333;            
+  padding: 4px 6px 6px 6px;  
+  border-radius: 1px;     
+  margin: 4px auto;       
 }
 .nome {
   width: 250px;
@@ -153,14 +153,65 @@ li {
 .skill-level {
   height: 100%;
   background: linear-gradient(90deg, #fff, #000);
-  width: 0; /* começa vazio */
-  animation: fillBar 2s ease forwards; /* animação */
+  width: 0; 
+  animation: fillBar 2s ease forwards; 
 }
-
-/* Animação que vai de 0 até o valor final */
 @keyframes fillBar {
   from { width: 0; }
   to   { width: var(--final-width); }
+}
+
+/* Layouts comparativos */
+.layouts-comparacao {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 15px 0 35px 0;
+}
+.layout-container {
+  text-align: center;
+  width: 300px;
+}
+.title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.subtitle {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+.image-box {
+  border: 1px solid #ccc;
+  height: 400px;
+  overflow-y: scroll;
+}
+.image-box img {
+  width: 100%;
+  display: block;
+}
+.video-card {
+  margin-bottom: 50px;
+  background: #fff;
+  padding: 15px;
+  width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.video-card iframe {
+  width: 100%;
+  height: 315px;
+  border: none;
+}
+.video-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.video-subtitle {
+  font-size: 14px;
+  color: #555;
+  margin-top: 3px;
 }
 </style>
 </head>
@@ -176,59 +227,28 @@ li {
     <!-- Coluna esquerda -->
     <div>
       <div class="card contact">
-        <!--<h2><i class="fa fa-address-card"></i> Contato</h2>-->
-        <p><i class="fa fa-map-marker-alt icon"></i> Marcílio de Noronha, Viana - ES, Brasil </br><span>Disponibilidade para viagem ✹ carro/moto </span></p>
-        <p><i class="fa fa-envelope icon"></i>euhiagorhyan@gmail.com</p>
-        <p><i class="fab fa-linkedin icon"></i><a href="https://www.linkedin.com/in/hiagorhyan">LinkedIn</a></p>
+        <p><i class="fa fa-map-marker-alt icon"></i> <strong>Marcílio de Noronha,</strong><br> Viana - ES, Brasil</p>
+        <p><i class="fa fa-square-check icon"></i> Disponibilidade para viagem <br> Carro e moto</p>
+        <p><i class="fa fa-envelope icon"></i> <a href="mailto:euhiagorhyan@gmail.com">euhiagorhyan@gmail.com</a></p>
+        <p><i class="fab fa-linkedin icon"></i> <a href="https://www.linkedin.com/in/hiagorhyan" target="_blank">LinkedIn</a></p>
       </div>
 
       <div class="card skills">
-        <h2><!--<i class="fa fa-code">--></i> Competências</h2>
-
-        <div class="skill">
-  <div class="skill-name">SEO & E-commerce</div>
-  <div class="skill-bar">
-    <div class="skill-level" style="--final-width: 90%;"></div>
-  </div>
-</div>
-
-<div class="skill">
-  <div class="skill-name">UX/UI Web Designer</div>
-  <div class="skill-bar">
-    <div class="skill-level" style="--final-width: 80%;"></div>
-  </div>
-</div>
-
-<div class="skill">
-  <div class="skill-name">Google Analytics / Power BI</div>
-  <div class="skill-bar">
-    <div class="skill-level" style="--final-width: 85%;"></div>
-  </div>
-</div>
-
-<div class="skill">
-  <div class="skill-name">Bling / Sankhya / VTEX / Marketplaces</div>
-  <div class="skill-bar">
-    <div class="skill-level" style="--final-width: 88%;"></div>
-  </div>
-</div>
-
-<div class="skill">
-  <div class="skill-name">HTML / CSS / JS</div>
-  <div class="skill-bar">
-    <div class="skill-level" style="--final-width: 75%;"></div>
-  </div>
-</div>
-
+        <h2>Competências</h2>
+        <div class="skill"><div class="skill-name">SEO & E-commerce</div><div class="skill-bar"><div class="skill-level" style="--final-width: 90%;"></div></div></div>
+        <div class="skill"><div class="skill-name">UX/UI Web Designer</div><div class="skill-bar"><div class="skill-level" style="--final-width: 80%;"></div></div></div>
+        <div class="skill"><div class="skill-name">Google Analytics / Power BI</div><div class="skill-bar"><div class="skill-level" style="--final-width: 85%;"></div></div></div>
+        <div class="skill"><div class="skill-name">Bling / Sankhya / VTEX / Marketplaces</div><div class="skill-bar"><div class="skill-level" style="--final-width: 88%;"></div></div></div>
+        <div class="skill"><div class="skill-name">HTML / CSS / JS</div><div class="skill-bar"><div class="skill-level" style="--final-width: 75%;"></div></div></div>
       </div>
 
       <div class="card skills">
-        <h2></i> Hard Skills</h2>
+        <h2>Hard Skills</h2>
         <div class="skill"><div class="skill-name">Excel avançado (tabelas dinâmicas, fórmulas, gráficos, PROCV)</div></div>
         <div class="skill"><div class="skill-name">Google Sheets e Google Docs</div></div>
-        <div class="skill"><div class="skill-name">Hubspot CRM, Marketing</div></div>
+        <div class="skill"><div class="skill-name">Hubspot CRM, Marketing e Sales</div></div>
         <div class="skill"><div class="skill-name">VTEX, Shopify, Tray e Wake</div></div>
-        <div class="skill"><div class="skill-name">Google Analytics, Ads</div></div>
+        <div class="skill"><div class="skill-name">Google Analytics, Ads, Appsflyer</div></div>
         <div class="skill"><div class="skill-name">SEO, CRM, BI, CRO</div></div>
         <div class="skill"><div class="skill-name">HTML, CCS3, JS e SQL</div></div>
         <div class="skill"><div class="skill-name">Pacote Office</div></div>
@@ -237,7 +257,7 @@ li {
       </div>
 
       <div class="card skills">
-        <h2></i> Soft Skills</h2>
+        <h2>Soft Skills</h2>
         <div class="skill"><div class="skill-name">Boa comunicação oral e escrita</div></div>
         <div class="skill"><div class="skill-name">Negociação</div></div>
         <div class="skill"><div class="skill-name">Organização</div></div>
@@ -256,20 +276,13 @@ li {
     <!-- Coluna direita -->
     <div>
       <div class="card">
-        <!--<h2><i class="fa fa-user"></i> Resumo</h2>-->
-        <p>
-          Sou profissional de E-commerce com sólida experiência em cadastro de produtos, gestão de marketplaces (Amazon, Mercado Livre, Magalu, B2W, Via Varejo) e administração de lojas virtuais. Atuo em todo o ciclo do digital: da otimização de SEO e tratamento de imagens à criação de campanhas promocionais, estratégias de UX/UI e análise de KPIs para alavancar vendas e conversão.
-        </p>
-        <p>
-          Tenho domínio de ferramentas como ERP Sankhya, CRM, VTEX, Google Analytics, Ads e Excel avançado. Minha atuação é orientada a dados, com foco em relatórios, performance, funil de vendas e desenvolvimento de estratégias para aquisição e retenção de clientes.
-        </p>
-        <p>
-          Sou organizado, proativo e analítico, com facilidade em negociação, comunicação e resolução de problemas. Trabalho em equipe multidisciplinar, propondo melhorias contínuas para garantir resultados consistentes e elevar a experiência digital do cliente.
-        </p>
+        <p>Sou profissional de E-commerce com sólida experiência em cadastro de produtos, gestão de marketplaces (Amazon, Mercado Livre, Magalu, B2W, Via Varejo) e administração de lojas virtuais. Atuo em todo o ciclo do digital: da otimização de SEO e tratamento de imagens à criação de campanhas promocionais, estratégias de UX/UI e análise de KPIs para alavancar vendas e conversão.</p>
+        <p>Tenho domínio de ferramentas como ERP Sankhya, CRM, VTEX, Google Analytics, Ads e Excel avançado. Minha atuação é orientada a dados, com foco em relatórios, performance, funil de vendas e desenvolvimento de estratégias para aquisição e retenção de clientes.</p>
+        <p>Sou organizado, proativo e analítico, com facilidade em negociação, comunicação e resolução de problemas. Trabalho em equipe multidisciplinar, propondo melhorias contínuas para garantir resultados consistentes e elevar a experiência digital do cliente.</p>
       </div>
 
       <div class="card">
-        <h2><!--<i class="fa fa-language"></i>--> Atividades / Habilidades</h2>
+        <h2>Atividades / Habilidades</h2>
         <p>Cadastro de produtos em sites e marketplaces (Amazon, Mercado Livre, Magalu, B2W, Via Varejo, MadeiraMadeira, Carrefour, WooCommerce, VTEX)</p>
         <p>Tratamento de imagens de produtos (Photoshop, CorelDraw, Canva, Crello)</p>
         <p>Manutenção de vitrines, banners e páginas de produtos</p>
@@ -316,7 +329,51 @@ li {
       <div class="card">
         <h2><i class="fa fa-graduation-cap"></i> Educação</h2>
         <ul>
-          <li><strong>Técnico em Informática</strong> – CEET Vasco CoutinhoTécnico em Informática (2015 - 2016)</li>
+          <li><strong>Técnico em Informática</strong> – CEET Vasco Coutinho (2015 - 2016)</li>
+          <div class="video-card">
+            <!-- Vídeo do YouTube -->
+            <iframe src="https://www.youtube.com/embed/AGIUr6edcWE" 
+                    title="YouTube video player" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+
+            <!-- Texto abaixo do vídeo -->
+            <div class="video-title">Vídeo institucional</div>
+            <div class="video-subtitle">CEET Vasco Coutinho</div>
+          </div>
+          <div class="video-card"> 
+              <!-- Vídeo do YouTube -->
+              <iframe width="560" height="315"
+                      src="https://www.youtube.com/embed/aNYxmtT6wkQ" 
+                      title="YouTube video player" 
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                      allowfullscreen>
+              </iframe>
+
+              <!-- Texto abaixo do vídeo -->
+              <div class="video-title">Técnico em Informática</div>
+              <div class="video-subtitle">CEET Vasco Coutinho (2015 - 2016)</div>
+          </div>
+          <div class="video-card"> 
+            <!-- SDK do Facebook -->
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous"
+              src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v19.0"></script>
+
+            <!-- Player do Facebook -->
+            <div class="fb-video"
+                 data-href="https://www.facebook.com/AdventistasBrasil/videos/10156533210769749/"
+                 data-width="500"
+                 data-show-text="false">
+            </div>
+
+            <!-- Texto abaixo do vídeo -->
+            <div class="video-title">Técnico em Informática</div>
+            <div class="video-subtitle">CEET Vasco Coutinho (2015 - 2016)</div>
+          </div>
+
           <li><strong>Graduação em Publicidade</strong> – Centro Universitário Adventista de São Paulo (2018 - 2021)</li>
         </ul>
       </div>
@@ -324,18 +381,67 @@ li {
       <div class="card">
         <h2><i class="fa fa-project-diagram"></i> Projetos</h2>
         <ul>
-          <li><strong>Site</strong> – Migração de Tecnologia de VTEX Legacy para VTEX IO e construção de novo layout para Acimaq, usando estrategias atuais. </li>
-          <li><strong>Marketplaces</strong> – Ativar marketplaces (Americanas, Magalu, Mercado Livre, Carrefour e Via Varejo) e integrar anuncios da Acimaq.</li>
+          <li><strong>VTEX</strong> – Migração de Tecnologia de VTEX Legacy para VTEX IO e construção de novo layout usando estratégias atuais.</li>
+
+          <!-- Comparação lado a lado -->
+          <div class="layouts-comparacao">
+            <div class="layout-container">
+              <div class="title">Layout Home</div>
+              <div class="subtitle">Antigo</div>
+              <div class="image-box">
+                <img src="https://www.fabiolobo.com.br/wp-content/uploads/2015/03/layout-loja-virtual-varejo.png" alt="Layout antigo">
+              </div>
+            </div>
+
+            <div class="layout-container">
+              <div class="title">Layout Home</div>
+              <div class="subtitle">Novo</div>
+              <div class="image-box">
+                <img src="https://www.fabiolobo.com.br/wp-content/uploads/2015/03/layout-loja-virtual-varejo.png" alt="Layout novo">
+              </div>
+            </div>
+
+            <div class="layout-container">
+              <div class="title">Layout PDP</div>
+              <div class="subtitle">Antigo</div>
+              <div class="image-box">
+                <img src="https://www.fabiolobo.com.br/wp-content/uploads/2015/03/layout-loja-virtual-varejo.png" alt="Layout antigo">
+              </div>
+            </div>
+
+            <div class="layout-container">
+              <div class="title">Layout PDP</div>
+              <div class="subtitle">Novo</div>
+              <div class="image-box">
+                <img src="https://www.fabiolobo.com.br/wp-content/uploads/2015/03/layout-loja-virtual-varejo.png" alt="Layout novo">
+              </div>
+            </div>
+
+            <div class="layout-container">
+              <div class="title">Layout Checkout</div>
+              <div class="subtitle">Antigo</div>
+              <div class="image-box">
+                <img src="https://www.fabiolobo.com.br/wp-content/uploads/2015/03/layout-loja-virtual-varejo.png" alt="Layout antigo">
+              </div>
+            </div>
+
+            <div class="layout-container">
+              <div class="title">Layout Checkout</div>
+              <div class="subtitle">Novo</div>
+              <div class="image-box">
+                <img src="https://www.fabiolobo.com.br/wp-content/uploads/2015/03/layout-loja-virtual-varejo.png" alt="Layout novo">
+              </div>
+            </div>
+          </div>
+
+          <li><strong>Marketplaces</strong> – Ativar marketplaces Americanas, Magalu, Mercado Livre, Carrefour e Via Varejo e integrar anúncios</li>
         </ul>
       </div>
 
       <div class="card">
         <h2><i class="fa fa-briefcase"></i> Experiência</h2>
         <ul>
-          <li>
-            <strong>Acimaq Equipamentos Comerciais</strong> – E-commerce  <em>(2022 – 2025) 4 Anos</em>  <br>
-            <!--SEO, gestão de catálogo, análise de KPIs e otimização de UX-->
-          </li>
+          <li><strong>Acimaq Equipamentos Comerciais</strong> – E-commerce <em>(2022 – 2025)</em></li>
         </ul>
       </div>
 
@@ -343,8 +449,3 @@ li {
   </div>
 </body>
 </html>
-
-
-
-
-
