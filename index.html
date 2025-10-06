@@ -293,6 +293,37 @@ li {
 .zoomable:hover {
   transform: scale(1.05);
 }
+
+.motivacional {
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 1px 24px 24px 24px;
+  text-align: center;
+  color: #333;
+  background: #ffff;
+}
+
+.motivacional .aspas {
+  font-size: 50px;
+  line-height: 1;
+  margin-top: 20px; /* espaço extra só acima da aspa */
+  margin-bottom: 1px;
+}
+
+.motivacional .texto {
+	font-style: italic;
+  color: #444;
+  margin: 0 0 10px 0;
+  line-height: 1.6;
+}
+
+.motivacional .autor {
+	font-style: italic;
+  font-weight: 600;
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+}
 </style>
 </head>
 <body>
@@ -354,6 +385,15 @@ li {
         <div class="skill"><div class="skill-name">Perfil comercial</div></div>
         <div class="skill"><div class="skill-name">Pensamento crítico e solução de problemas</div></div>
       </div>
+
+      <div class="motivacional">
+		  <p class="aspas">“</p>
+		  <p class="texto">
+		    Aprendi que é importante ser ensinável. A gente não sabe tudo e nem sempre está certo — e tá tudo bem. 
+		    O que importa é estar aberto a aprender e evoluir.
+		  </p>
+		  <p class="autor">— Minha frase motivacional</p>
+		</div>
     </div>
 
     <!-- Coluna direita -->
@@ -587,8 +627,3 @@ li {
 </script>
 </body>
 </html>
-
-
-
-
-
