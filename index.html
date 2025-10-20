@@ -337,19 +337,48 @@ li {
   color: #777;
   margin-top: 10px;
 }
+.rodape {
+  background: linear-gradient(135deg, #4C4C4C, #333, #4C4C4C);
+  color: #808080;
+  text-align: center;
+  padding: 25px 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.conteudo-rodape {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.rodape p {
+  margin: 5px 0;
+}
+
+.rodape .credito span {
+  /*font-weight: 600;*/
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.rodape .credito span:hover {
+  color: #00ffa2;
+  text-shadow: 0 0 10px rgba(0, 255, 162, 0.7);
+}
 </style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW9XT933" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-  <header>
+<header>
     <img src="https://raw.githubusercontent.com/hiagorhyanns/curriculo/img/hiago-rhyan.avif" alt="Foto">
     <h1 class="marcado nome">Hiago Rhyan</h1>
     <p class="marcado legenda">E-commerce, SEO, Marketplaces e Analytics</p>
-  </header>
+</header>
 
-  <div class="container">
+<div class="container">
 
     <!-- Coluna esquerda -->
     <div>
@@ -607,7 +636,13 @@ li {
       </div>
       
     </div>
+</div>
+<footer class="rodape">
+  <div class="conteudo-rodape">
+    <p>© 2025 Todos os direitos reservados.</p>
+    <p class="credito">Desenvolvido com 💻 por <span>Hiago Rhyan</span></p>
   </div>
+</footer>
 
 <script>
   const modal = document.getElementById("imgModal");
@@ -640,4 +675,5 @@ li {
 </script>
 </body>
 </html>
+
 
